@@ -11,6 +11,15 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+
+Route::get('/',function () {
+    return view('pages.index');
 });
+
+//Delivery routes
+Route::get('delivery/create','DeliveryController@create');
+Route::post('delivery/store','DeliveryController@store');
+
