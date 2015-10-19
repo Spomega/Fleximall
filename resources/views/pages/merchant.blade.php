@@ -1,7 +1,6 @@
 @extends('pages.template')
 
 
-
 @section('main')
 <div class="row"> 
     
@@ -12,9 +11,9 @@
       <ul class="breadcrumb">
         <li><a href="#">Home</a> <span class="divider">/</span></li>
         <li><a href="#">Pages</a> <span class="divider">/</span></li>
-        <li class="active">Delivery</li>
+        <li class="active">Merchant</li>
       </ul>
-      <h1 class="margin-bottom">Delivery <span>Company</span></h1>
+      <h1 class="margin-bottom">Register <span>Company</span></h1>
     </div>
 
   </div>
@@ -23,28 +22,38 @@
       <div class="span3">
 <!--      <h4 class="margin-bottom"></h4>-->
      
-      {!!Form::open (array('url'=>'delivery/store','method'=>'post') ) !!}
+      {!!Form::open (array('url'=>'merchant/store','method'=>'post','files'=>'true') ) !!}
         <div class="control-group">
           <label class="control-label">Details</label>
           <div class="controls">
-      {!! Form::text('companyname',null,array('class'=>'form-control','required'=>'true','placeholder'=>'Company Name')) !!}
+      {!! Form::text('merchantname',null,array('class'=>'form-control','required'=>'true','placeholder'=>'Name')) !!}
       {!! Form::text('email',null,array('class'=>'form-control','required'=>'true','placeholder'=>'Email')) !!}
       {!! Form::text('contactnumber',null,array('class'=>'form-control','required'=>'true','placeholder'=>'Contact Number')) !!}
       {!! Form::textarea('address',null,array('class'=>'form-control','required'=>'true','rows'=>'3','placeholder'=>'Address')) !!}
-      {!! Form::text('registrationcode',null,array('class'=>'form-control','required'=>'true','placeholder'=>'Registration Code')) !!}
-      {!! Form::text('insurancecompany',null,array('class'=>'form-control','required'=>'true','placeholder'=>'Insurance Service Provider'))!!}
-      {!! Form::text('policy',null,array('class'=>'form-control','required'=>'true','placeholder'=>'Policy Number'))!!} 
+   
+      {!! Form::text('bannermessage',null,array('class'=>'form-control','required'=>'true','placeholder'=>'Banner Message'))!!}
+      
           </div>
         </div>
         <div class="control-group">
-          <label class="control-label">Vehicle Type</label>
-          <div class="controls">
-             <div class="col-xs-8">
-              @foreach(App\Vehicle::all() as $vehicle)
-          <label>{!! Form::checkbox('vehicle[]', $vehicle->id) !!}{{$vehicle->vehiclename}}</label>
-              @endforeach
-          </div>
-          </div>
+            <label class="control-label">Category</label>
+            <div class="controls">
+                <div class="col-xs-8">
+                    <select class="form-control" name="category">
+                        <option value="1">Department Store</option>
+                        <option value="2">General Store</option>
+                    </select>
+                    <label></label>
+
+                </div>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">Banner Image</label>
+            <div class="controls">
+                {!! Form::file('image',null,array('class'=>'form-control','required')) !!}
+
+            </div>
         </div>
         <div class="control-group no-margin">
           <div class="controls">
@@ -53,6 +62,7 @@
         </div>
       {!!Form::close()!!}
     </div>
- </div>    
+</div>
+
 
 @stop

@@ -5,10 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\Delivery;
-use App\DeliveryVehicle;
+use App\Schedule;
 
-class DeliveryController extends Controller
+class ScheduleController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -27,7 +26,7 @@ class DeliveryController extends Controller
      */
     public function create()
     {
-        return view('pages.delivery');
+        return view('pages.schedule');
     }
 
     /**
@@ -38,39 +37,22 @@ class DeliveryController extends Controller
      */
     public function store(Request $request)
     {
-          $this->validate($request,['companyname'=>'required','email'=>'required',
-             'contactnumber'=>'required','address'=>'required','registrationcode'=>'required',
-             'insurancecompany'=>'required','policy'=>'required']); 
-          
-         $delivery = new Delivery;
-         $deliveryvehicle = new DeliveryVehicle;
+        //
+         $this->validate($request,['day'=>'required','starttime'=>'required',
+             'endtime'=>'required']); 
+         
+         $schedule = new Schedule;
+         
+         $schedule->day = $request->input('day');
+         $schedule->starttime = $request->input('starttime');
+         $schedule->endtime = $request->input('endtime');
+         $schedule->deliverycompany_id = '2';
          
          
+         $schedule->save();
          
-         $delivery->companyname = $request->input('companyname');
-         $delivery->email = $request->input('email');
-         $delivery->contactnumber = $request->input('contactnumber');
-         $delivery->address = $request->input('address');
-         $delivery->registrationcode = $request->input('insurancecompany');
-         $delivery->insurancecompany = $request->input('email');
-         $delivery->policynumber = $request->input('policy');
-         $delivery->registrationstatus = '0';
-         
-         $delivery->save();
-         
-         $vehicles = $request->input('vehicle');
-         
-         foreach ($vehicles as $vehicle)
-         {
-             $deliveryvehicle->vehicle_id = $vehicle;
-             $deliveryvehicle->delivercompany_id = $delivery->id;
-             $deliveryvehicle->save();
-         }
-         
-         
-      return redirect('delivery/create')->with('message','Delivery Company Created Successfully'); 
-         
-          
+         return redirect('schedule/create')->with('message','Schedule Created Successfully'); 
+        
     }
 
     /**

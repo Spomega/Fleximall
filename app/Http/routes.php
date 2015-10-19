@@ -23,3 +23,10 @@ Route::get('/',function () {
 Route::get('delivery/create','DeliveryController@create');
 Route::post('delivery/store','DeliveryController@store');
 
+//Schedule
+Route::get('schedule/create','ScheduleController@create');
+Route::post('schedule/store','ScheduleController@store');
+
+//Merchant
+Route::get('merchant/create','MerchantController@create');
+Route::post('merchant/store','MerchantController@store');

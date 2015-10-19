@@ -5,10 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\Delivery;
-use App\DeliveryVehicle;
+use App\Merchant;
 
-class DeliveryController extends Controller
+class MerchantController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -27,7 +26,8 @@ class DeliveryController extends Controller
      */
     public function create()
     {
-        return view('pages.delivery');
+        //
+        return view('pages.merchant');
     }
 
     /**
@@ -38,39 +38,33 @@ class DeliveryController extends Controller
      */
     public function store(Request $request)
     {
-          $this->validate($request,['companyname'=>'required','email'=>'required',
-             'contactnumber'=>'required','address'=>'required','registrationcode'=>'required',
-             'insurancecompany'=>'required','policy'=>'required']); 
-          
-         $delivery = new Delivery;
-         $deliveryvehicle = new DeliveryVehicle;
-         
-         
-         
-         $delivery->companyname = $request->input('companyname');
-         $delivery->email = $request->input('email');
-         $delivery->contactnumber = $request->input('contactnumber');
-         $delivery->address = $request->input('address');
-         $delivery->registrationcode = $request->input('insurancecompany');
-         $delivery->insurancecompany = $request->input('email');
-         $delivery->policynumber = $request->input('policy');
-         $delivery->registrationstatus = '0';
-         
-         $delivery->save();
-         
-         $vehicles = $request->input('vehicle');
-         
-         foreach ($vehicles as $vehicle)
-         {
-             $deliveryvehicle->vehicle_id = $vehicle;
-             $deliveryvehicle->delivercompany_id = $delivery->id;
-             $deliveryvehicle->save();
-         }
-         
-         
-      return redirect('delivery/create')->with('message','Delivery Company Created Successfully'); 
-         
-          
+        //
+        $this->validate($request,['image'=>'required|mimes:jpeg,png','merchantname'=>'required','email'=>'required',
+             'contactnumber'=>'required','address'=>'required','bannermessage'=>'required']); 
+        
+        $merchant = new Merchant;
+           
+        $merchant->shopname  = $request->input('merchantname');
+        $merchant->contactnumber = $request->input('contactnumber');
+        $merchant->bannerimage = $request->input('bannerimage');
+        $merchant->address = $request->input('address');
+        $merchant->category = $request->input('category');
+        $merchant->email = $request->input('email');
+        $merchant->registrationstatus = '0';
+        
+            // upload the image //
+      $file = $request->file('image');
+      $destination_path =  'localhost:8000'.'/public/images/';
+      $filename = str_random(6).'_'.$file->getClientOriginalName();
+      $file->move($destination_path, $filename);
+       
+      // save image data into database //
+      $merchant->bannerimage = $destination_path . $filename;
+      
+      $merchant->save();
+        
+       
+      return redirect('merchant/create')->with('message','Merchant Created'); 
     }
 
     /**
