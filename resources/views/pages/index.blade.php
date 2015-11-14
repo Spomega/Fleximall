@@ -1,7 +1,6 @@
 @extends('pages.template')
 
 
-
 @section('main')
 
   <div class="row">

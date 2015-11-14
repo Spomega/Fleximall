@@ -30,3 +30,8 @@ Route::post('schedule/store','ScheduleController@store');
 //Merchant
 Route::get('merchant/create','MerchantController@create');
 Route::post('merchant/store','MerchantController@store');
+
+
+//Item
+Route::get('item/create','ItemController@create');
+Route::post('item/store','ItemController@store');
