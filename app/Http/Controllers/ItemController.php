@@ -62,7 +62,7 @@ class ItemController extends Controller
       $file->move($destination_path, $filename);
        
       // save image data into database //
-      $item->image = $destination_path . $filename;
+      $item->thumbnailimage = $destination_path . $filename;
       
       $item->save();
         
