@@ -6,9 +6,18 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests;
 use App\Item;
+use App\Repositories\ItemRepository as ViewItem;
 
 class ItemController extends Controller
 {
+    
+    
+     protected $item;
+    
+     public function __construct(ViewItem $item) {
+       
+        $this->item = $item;
+    }
     /**
      * Display a listing of the resource.
      *
@@ -17,6 +26,8 @@ class ItemController extends Controller
     public function index()
     {
         //
+        $items = $this->item->all();
+	return view('pages.item_view',  compact('items'));
     }
 
     /**
@@ -50,6 +61,7 @@ class ItemController extends Controller
         $item->price = $request->input('price');
         $item->description = $request->input('description');
         $item->category = $request->input('category');
+        $item->quantity = $request->input('quantity');
         $item->merchant_id = '2';
         $item->status = '1';
         
@@ -67,7 +79,7 @@ class ItemController extends Controller
       $item->save();
         
        
-      return redirect('item/create')->with('message','product created'); 
+      return redirect('item/view')->with('message','product created successfully'); 
     }
 
     /**

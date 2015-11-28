@@ -16,8 +16,8 @@ and open the template in the editor.
         {!! HTML::style('css/flexslider.css')!!}
         {!! HTML::style('css/fancybox.css')  !!}
         {!! HTML::style('css/masonry.css')  !!}
-        
-<link href="css/color/multicolor.css" rel="stylesheet" type="text/css" id="changeColor" />
+<!--        {!! HTML::style('css/color/multicolor.css')  !!}-->
+<!--<link href="css/color/multicolor.css" rel="stylesheet" type="text/css" id="changeColor" />-->
 <link href="http://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet" type="text/css" />
 <link rel="shortcut icon" href="img/favicon.ico" />
 <!-- Scripts -->
@@ -77,9 +77,13 @@ and open the template in the editor.
         </div>
 
         @if(Session::has('message'))
-                    <div class="alert alert-success alert-dismissible">
+<!--                    <div class="alert alert-success alert-dismissible">
                         {{Session::get('message')}}
-                    </div>
+                    </div>-->
+         <!-- Alert -->
+      <div class="alert alert-info">
+        <button type="button" class="close" data-dismiss="alert">×</button>
+        <strong>Message: </strong> {{Session::get('message')}}</div>
         @endif
         <!-- Logo --> 
 <!--        <a href="#" id="logo"><img src="images/Flexied.png" alt="logo" /></a> -->

@@ -28,6 +28,7 @@
           <div class="controls">
       {!! Form::text('itemname',null,array('class'=>'form-control','required'=>'true','placeholder'=>'product name')) !!}
       {!! Form::text('price',null,array('class'=>'form-control','required'=>'true','placeholder'=>'price')) !!}
+      {!! Form::text('quantity',null,array('class'=>'form-control','required'=>'true','placeholder'=>'quantity')) !!}
       {!! Form::textarea('description',null,array('class'=>'form-control','required'=>'true','placeholder'=>'description')) !!}
           </div>
         </div>

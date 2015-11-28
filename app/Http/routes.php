@@ -15,10 +15,10 @@
 //    return view('welcome');
 //});
 
-Route::get('/',function () {
-    return view('pages.index');
-});
-
+//Route::get('/',function () {
+//    return view('pages.index');
+//});
+Route::get('/','HomeController@index');
 //Delivery routes
 Route::get('delivery/create','DeliveryController@create');
 Route::post('delivery/store','DeliveryController@store');
@@ -35,3 +35,4 @@ Route::post('merchant/store','MerchantController@store');
 //Item
 Route::get('item/create','ItemController@create');
 Route::post('item/store','ItemController@store');
+Route::get('item/view','ItemController@index');
