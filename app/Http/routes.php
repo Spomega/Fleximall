@@ -29,7 +29,10 @@ Route::post('schedule/store','ScheduleController@store');
 
 //Merchant
 Route::get('merchant/create','MerchantController@create');
+Route::get('merchant/dashboard','MerchantController@showdashboard');
+Route::get('merchant/dash','MerchantController@index');
 Route::post('merchant/store','MerchantController@store');
+
 
 
 //Item

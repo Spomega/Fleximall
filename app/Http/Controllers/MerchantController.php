@@ -17,6 +17,7 @@ class MerchantController extends Controller
     public function index()
     {
         //
+         return view('pages.merchant_dashboard');
     }
 
     /**
@@ -28,6 +29,13 @@ class MerchantController extends Controller
     {
         //
         return view('pages.merchant');
+    }
+    
+    
+    public function showdashboard()
+    {
+        //
+        return view('pages.merchant_view');
     }
 
     /**
