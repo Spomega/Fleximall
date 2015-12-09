@@ -12,30 +12,40 @@ and open the template in the editor.
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <!-- Bootstrap core CSS -->
+<!--         Bootstrap core CSS 
         <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-        <!-- Font Awesome -->
+         Font Awesome 
         <link href="css/font-awesome.min.css" rel="stylesheet">
 
-        <!-- ionicons -->
+         ionicons 
         <link href="css/ionicons.min.css" rel="stylesheet">
 
-        <!-- Morris -->
+         Morris 
         <link href="css/morris.css" rel="stylesheet">	
 
-        <!-- Datepicker -->
+         Datepicker 
         <link href="css/datepicker.css" rel="stylesheet">	
 
-        <!-- Animate -->
+         Animate 
         <link href="css/animate.min.css" rel="stylesheet">
 
-        <!-- Owl Carousel -->
+         Owl Carousel 
         <link href="css/owl.carousel.min.css" rel="stylesheet">
         <link href="css/owl.theme.default.min.css" rel="stylesheet">
 
-        <!-- Simplify -->
-        <link href="css/simplify.min.css" rel="stylesheet">
+         Simplify 
+        <link href="css/simplify.min.css" rel="stylesheet">-->
+        {!! HTML::style('bootstrap/css/bootstrap.min.css')  !!}
+        {!! HTML::style('css/font-awesome.min.css')  !!}
+        {!! HTML::style('css/ionicons.min.css')  !!}
+        {!! HTML::style('css/morris.css')  !!}
+        {!! HTML::style('css/datepicker.css')  !!}
+        {!! HTML::style('css/animate.min.css')  !!}
+        {!! HTML::style('css/owl.carousel.min.css')  !!}
+        {!! HTML::style('css/owl.theme.default.min.css')  !!}
+        {!! HTML::style('css/simplify.min.css')  !!}')  !!}
+        
 
         <style type="text/css">.jqstooltip { position: absolute;left: 0px;top: 0px;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;padding: 5px;border: 1px solid white;z-index: 10000;}.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}</style>
     </head>
@@ -692,7 +702,7 @@ and open the template in the editor.
                                 Welcome Back, John Doe , <i class="fa fa-map-marker text-danger"></i> London
                             </div>
                         </div>
-                        <div class="col-sm-6 text-right text-left-sm p-top-sm">
+<!--                        <div class="col-sm-6 text-right text-left-sm p-top-sm">
                             <div class="btn-group">
                                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
                                     Select Project <span class="caret"></span>
@@ -707,7 +717,7 @@ and open the template in the editor.
                             </div>
 
                             <a class="btn btn-default"><i class="fa fa-cog"></i></a>
-                        </div>
+                        </div>-->
                     </div>
 
                     <div class="row m-top-md">
@@ -917,8 +927,8 @@ and open the template in the editor.
                         </div><!-- ./col -->
                     </div>
 
-                    <div class="row">
-                        <div class="col-lg-8">
+                  <div class="row">
+                       <!--   <div class="col-lg-8">
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="smart-widget">
@@ -970,9 +980,9 @@ and open the template in the editor.
                                                     <span class="badge badge-danger">11:15</span>
                                                 </li>
                                             </ul>
-                                        </div><!-- ./smart-widget-inner -->
-                                    </div><!-- ./smart-widget -->
-                                </div><!-- ./col -->
+                                        </div> ./smart-widget-inner 
+                                    </div> ./smart-widget 
+                                </div> ./col 
                                 <div class="col-lg-6">
                                     <div class="smart-widget widget-purple">
                                         <div class="smart-widget-header">
@@ -1078,15 +1088,15 @@ and open the template in the editor.
                                                     <span class="input-group-btn">
                                                         <button class="btn btn-success btn-sm no-shadow" id="btn-chat">Send</button>
                                                     </span>
-                                                </div><!-- /input-group -->
-                                            </div><!-- ./smart-widget-footer -->
-                                        </div><!-- ./smart-widget-inner -->
-                                    </div><!-- ./smart-widget -->
-                                </div><!-- ./col -->
-                            </div><!-- ./row -->
+                                                </div> /input-group 
+                                            </div> ./smart-widget-footer 
+                                        </div> ./smart-widget-inner 
+                                    </div> ./smart-widget 
+                                </div> ./col--> 
+                            </div> <!--./row--> 
 
                             <div class="smart-widget">
-                                <div class="smart-widget-header">
+<!--                                <div class="smart-widget-header">
                                     Website Statistic
                                     <span class="smart-widget-option">
                                         <span class="refresh-icon-animated">
@@ -1105,8 +1115,8 @@ and open the template in the editor.
                                             <i class="fa fa-times"></i>
                                         </a>
                                     </span>
-                                </div>
-                                <div class="smart-widget-inner table-responsive">
+                                </div>-->
+<!--                                <div class="smart-widget-inner table-responsive">
                                     <div class="smart-widget-hidden-section">
                                         <ul class="widget-color-list clearfix">
                                             <li style="background-color:#20232b;" data-color="widget-dark"></li>
@@ -1194,11 +1204,11 @@ and open the template in the editor.
                                             </tr>
                                         </tbody>
                                     </table>
-                                </div><!-- ./smart-widget-inner -->
+                                </div> ./smart-widget-inner -->
                             </div><!-- ./smart-widget -->
                         </div><!-- ./col -->
                         <div class="col-lg-4">
-                            <div class="smart-widget">
+<!--                            <div class="smart-widget">
                                 <div class="smart-widget-header">
                                     <span class="badge badge-danger pull-right">10</span>
                                     To Do List
@@ -1273,10 +1283,10 @@ and open the template in the editor.
                                             </div>
                                         </li>
                                     </ul>
-                                </div><!-- ./smart-widget-inner -->
-                            </div><!-- ./smart-widget -->
+                                </div> ./smart-widget-inner 
+                            </div> ./smart-widget -->
                             <div class="task-widget">
-                                <div class="task-widget-body clearfix">
+<!--                                <div class="task-widget-body clearfix">
                                     <div class="pie-chart-wrapper">
                                         <div class="chart task-pie-chart line-normal" data-percent="73">
                                             <h1 class="m-top-lg m-bottom-none">73</h1>
@@ -1287,7 +1297,7 @@ and open the template in the editor.
                                         <small class="text-upper text-muted block font-sm">Task Completed</small>
                                         <h1 class="no-margin">4312</h1>
                                     </div>
-                                </div><!-- ./task-widget-body -->
+                                </div> ./task-widget-body 
                                 <div class="task-widget-statatistic">
                                     <ul class="clearfix">
                                         <li class="bg-grey border-success">
@@ -1302,13 +1312,13 @@ and open the template in the editor.
                                             <div class="text-muted text-upper font-sm">Budget</div>
                                             $17.1M
                                         </li>
-                                    </ul><!-- ./row -->
-                                </div>
+                                    </ul> ./row 
+                                </div>-->
                             </div><!-- ./task-widget -->
                         </div><!-- ./col -->
                     </div><!-- ./row -->
 
-                    <div class="row">
+<!--                    <div class="row">
                         <div class="col-md-3">
                             <div class="panel panel-default weather-widget">
                                 <div class="panel-body bg-success text-white">
@@ -1324,8 +1334,8 @@ and open the template in the editor.
                                     <div class="h4 text-upper">New York <i class="fa fa-map-marker"></i></div>
                                     <div class="text-muted font-12 m-top-xs">Rainy Day</div>
                                 </div>
-                            </div><!-- ./panel -->
-                        </div><!-- ./col -->
+                            </div> ./panel 
+                        </div> ./col 
                         <div class="col-md-3">
                             <div class="panel panel-default weather-widget">
                                 <div class="panel-body bg-warning text-white">
@@ -1341,8 +1351,8 @@ and open the template in the editor.
                                     <div class="h4 text-upper">London <i class="fa fa-map-marker"></i></div>
                                     <div class="text-muted font-12 m-top-xs">Cloudy Day</div>
                                 </div>
-                            </div><!-- ./panel -->
-                        </div><!-- ./col -->
+                            </div> ./panel 
+                        </div> ./col 
                         <div class="col-md-3">
                             <div class="panel panel-default weather-widget">
                                 <div class="panel-body bg-danger text-white">
@@ -1358,8 +1368,8 @@ and open the template in the editor.
                                     <div class="h4 text-upper">Bangkok <i class="fa fa-map-marker"></i></div>
                                     <div class="text-muted font-12 m-top-xs">Wind</div>
                                 </div>
-                            </div><!-- ./panel -->
-                        </div><!-- ./col -->
+                            </div> ./panel 
+                        </div> ./col 
                         <div class="col-md-3">
                             <div class="panel panel-default weather-widget">
                                 <div class="panel-body bg-info text-white">
@@ -1375,20 +1385,20 @@ and open the template in the editor.
                                     <div class="h4 text-upper">Tokyo <i class="fa fa-map-marker"></i></div>
                                     <div class="text-muted font-12 m-top-xs">Clear Day</div>
                                 </div>
-                            </div><!-- ./panel -->
-                        </div><!-- ./col -->
-                    </div>
+                            </div> ./panel 
+                        </div> ./col 
+                    </div>-->
                 </div><!-- ./padding-md -->
             </div><!-- /main-container -->
 
-            <footer class="footer">
+<!--            <footer class="footer">
                 <span class="footer-brand">
-                    <strong class="text-danger">Simplify</strong> Admin
+                    <strong class="text-danger">Flexi</strong>Mall
                 </span>
                 <p class="no-margin">
-                    © 2014 <strong>Simplify Admin</strong>. ALL Rights Reserved. 
+                    © 2015 <strong>Flexi Mall</strong>. ALL Rights Reserved. 
                 </p>	
-            </footer>
+            </footer>-->
         </div><!-- /wrapper -->
 
         <a href="#" class="scroll-to-top hidden-print"><i class="fa fa-chevron-up fa-lg"></i></a>
@@ -1402,50 +1412,68 @@ and open the template in the editor.
         <!-- Placed at the end of the document so the pages load faster -->
 
         <!-- Jquery -->
-        <script src="js/jquery-1.11.1.min.js"></script>
+<!--        <script src="js/jquery-1.11.1.min.js"></script>
 
-        <!-- Bootstrap -->
+         Bootstrap 
         <script src="bootstrap/js/bootstrap.min.js"></script>
 
-        <!-- Flot -->
+         Flot 
         <script src="js/jquery.flot.min.js"></script>
 
-        <!-- Slimscroll -->
+         Slimscroll 
         <script src="js/jquery.slimscroll.min.js"></script>
 
-        <!-- Morris -->
+         Morris 
         <script src="js/rapheal.min.js"></script>	
         <script src="js/morris.min.js"></script>	
 
-        <!-- Datepicker -->
+         Datepicker 
         <script src="js/uncompressed/datepicker.js"></script>
 
-        <!-- Sparkline -->
+         Sparkline 
         <script src="js/sparkline.min.js"></script>
 
-        <!-- Skycons -->
+         Skycons 
         <script src="js/uncompressed/skycons.js"></script>
 
-        <!-- Popup Overlay -->
+         Popup Overlay 
         <script src="js/jquery.popupoverlay.min.js"></script>
 
-        <!-- Easy Pie Chart -->
+         Easy Pie Chart 
         <script src="js/jquery.easypiechart.min.js"></script>
 
-        <!-- Sortable -->
+         Sortable 
         <script src="js/uncompressed/jquery.sortable.js"></script>
 
-        <!-- Owl Carousel -->
+         Owl Carousel 
         <script src="js/owl.carousel.min.js"></script>
 
-        <!-- Modernizr -->
+         Modernizr 
         <script src="js/modernizr.min.js"></script>
 
-        <!-- Simplify -->
+         Simplify 
         <script src="js/simplify/simplify.js"></script>
-        <script src="js/simplify/simplify_dashboard.js"></script>
+        <script src="js/simplify/simplify_dashboard.js"></script>-->
+        {!! HTML::script('js/jquery-1.11.1.min.js') !!}    
+        {!! HTML::script('bootstrap/js/bootstrap.min.js') !!}
 
-
+        {!! HTML::script('js/jquery.flot.min.js') !!}
+        {!! HTML::script('js/jquery.slimscroll.min.js') !!}
+        {!! HTML::script('js/rapheal.min.js') !!}
+        {!! HTML::script('js/morris.min.js') !!}
+        {!! HTML::script('js/uncompressed/datepicker.js') !!}
+        {!! HTML::script('js/sparkline.min.js') !!}
+        {!! HTML::script('js/uncompressed/skycons.js') !!}
+        {!! HTML::script('js/uncompressed/jquery.sortable.js') !!}
+        {!! HTML::script('js/jquery.popupoverlay.min.js') !!}
+        {!! HTML::script('js/jquery.easypiechart.min.js') !!}
+        {!! HTML::script('js/owl.carousel.min.js') !!}
+        {!! HTML::script('js/modernizr.min.js') !!}
+        {!! HTML::script('js/simplify/simplify.js') !!}
+        {!! HTML::script('js/simplify/simplify_dashboard.js') !!}
+       
+        
+        
         <script>
             $(function () {
                 $('.chart').easyPieChart({

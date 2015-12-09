@@ -17,7 +17,7 @@ class MerchantController extends Controller
     public function index()
     {
         //
-         return view('pages.merchant_dashboard');
+         return view('pages.mechant_dashboard');
     }
 
     /**

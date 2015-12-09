@@ -10,8 +10,9 @@
       <!-- Flex Slider -->
       <div class="flexslider">
         <ul class="slides">
-          <li><a href="#"><img src="banner/slider.jpg" alt="Slider" /></a></li>
-          <li><a href="#"><img src="banner/slider2.jpg" alt="Slider" /></a></li>
+          <li><a href="#"><img src="banner/Buyhere.jpg" alt="Slider" /></a></li>
+          <li><a href="#"><img src="banner/FlexiMallBe.jpg" alt="Slider" /></a></li>
+          <li><a href="#"><img src="banner/KeepBuying.jpg" alt="Slider" /></a></li>
         </ul>
       </div>
     </div>
