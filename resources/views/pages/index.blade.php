@@ -19,7 +19,104 @@
   </div>
 </div>
 
+
+
 <!-- Products List -->
+<div class="container">
+  <div class="row">
+    <div class="span12">
+<!--      <h2 class="text-center margin-top margin-bottom">Our <span>Services</span></h2>
+      
+       Services List 
+      <ul class="thumbnails about-list">
+        
+         Service Single 
+        <li class="span3" style="opacity: 1;">
+          <div class="thumbnail"><i class="icon-globe icon-service"></i>
+            <div class="caption">
+              <h3><a href="#">Web Developer</a></h3>
+              <em>Subtitle here</em>
+              <div class="clearfix"></div>
+              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam <strong>euismod</strong>.</p>
+            </div>
+          </div>
+        </li>
+        
+         Service Single 
+        <li class="span3" style="opacity: 1;">
+          <div class="thumbnail"><i class="icon-key icon-service"></i>
+            <div class="caption">
+              <h3><a href="#">Web Developer</a></h3>
+              <em>Subtitle here</em>
+              <div class="clearfix"></div>
+              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam <strong>euismod</strong>.</p>
+            </div>
+          </div>
+        </li>
+        
+         Service Single 
+        <li class="span3">
+          <div class="thumbnail"><i class="icon-leaf icon-service"></i>
+            <div class="caption">
+              <h3><a href="#">Web Developer</a></h3>
+              <em>Subtitle here</em>
+              <div class="clearfix"></div>
+              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam <strong>euismod</strong>.</p>
+            </div>
+          </div>
+        </li>
+        
+         Service Single 
+        <li class="span3" style="opacity: 1;">
+          <div class="thumbnail"><i class="icon-wrench icon-service"></i>
+            <div class="caption">
+              <h3><a href="#">Web Developer</a></h3>
+              <em>Subtitle here</em>
+              <div class="clearfix"></div>
+              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam <strong>euismod</strong>.</p>
+            </div>
+          </div>
+        </li>
+      </ul>-->
+      <hr>
+      
+      <!-- Portfolio Columns -->
+      <div class="products-list products-list-simple">
+        <h2 class="text-center margin-top margin-bottom">The <span>Malls</span></h2>
+        <ul class="thumbnails">
+          
+          <!-- Products Single Box -->
+          <li class="span3" style="opacity: 1;">
+            <div class="thumbnail"><img src="products/folio-1.jpg" alt="Product" class="folio">
+              <div class="folio-detail"><a href="products/folio-1.jpg" class="view-fancybox" rel="tag"><i class="icon-camera"></i></a></div>
+            </div>
+          </li>
+          
+          <!-- Products Single Box -->
+          <li class="span3" style="opacity: 1;">
+            <div class="thumbnail"><img src="products/folio-2.jpg" alt="Product" class="folio">
+              <div class="folio-detail"><a href="products/folio-2.jpg" class="view-fancybox" rel="tag"><i class="icon-camera"></i></a></div>
+            </div>
+          </li>
+          
+          <!-- Products Single Box -->
+          <li class="span3" style="opacity: 1;">
+            <div class="thumbnail"><img src="products/folio-3.jpg" alt="Product" class="folio">
+              <div class="folio-detail"><a href="products/folio-3.jpg" class="view-fancybox" rel="tag"><i class="icon-camera"></i></a></div>
+            </div>
+          </li>
+          
+          <!-- Products Single Box -->
+          <li class="span3" style="opacity: 1;">
+            <div class="thumbnail"><img src="products/folio-4.jpg" alt="Product" class="folio">
+              <div class="folio-detail"><a href="products/folio-4.jpg" class="view-fancybox" rel="tag"><i class="icon-camera"></i></a></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
 <div class="products-list">
   <div class="container">
     <h3><span>Featured</span> Products</h3>
