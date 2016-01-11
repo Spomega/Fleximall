@@ -39,3 +39,7 @@ Route::post('merchant/store','MerchantController@store');
 Route::get('item/create','ItemController@create');
 Route::post('item/store','ItemController@store');
 Route::get('item/view','ItemController@index');
+
+//User
+Route::get('user/create','UserController@create');
+Route::post('item/store','UserController@store');

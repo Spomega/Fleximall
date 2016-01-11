@@ -47,7 +47,7 @@ and open the template in the editor.
         {!! HTML::style('css/simplify.min.css')  !!}')  !!}
         
 
-        <style type="text/css">.jqstooltip { position: absolute;left: 0px;top: 0px;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;padding: 5px;border: 1px solid white;z-index: 10000;}.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}</style>
+  <style type="text/css">.jqstooltip { position: absolute;left: 0px;top: 0px;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;padding: 5px;border: 1px solid white;z-index: 10000;}.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}</style>
     </head>
     <body class="">
         <div id="deleteWidgetConfirm_background" class="popup_background" style="opacity: 0; visibility: hidden; position: fixed; top: 0px; right: 0px; bottom: 0px; left: 0px; z-index: 2000; transition: all 0.3s; background-color: black;"></div><div id="deleteWidgetConfirm_wrapper" class="popup_wrapper" style="opacity: 0; visibility: hidden; position: fixed; overflow: auto; z-index: 2001; transition: all 0.3s; top: 0px; right: 0px; left: 0px; bottom: 0px; text-align: center; display: none;"><div class="custom-popup delete-widget-popup delete-confirmation-popup popup_content" id="deleteWidgetConfirm" data-popup-initialized="true" aria-hidden="true" role="dialog" style="opacity: 0; visibility: hidden; display: inline-block; outline: none; transition: all 0.3s; text-align: left; position: relative; vertical-align: middle;">
@@ -68,8 +68,8 @@ and open the template in the editor.
                 </div>
             </div><div class="popup_align" style="display: inline-block; vertical-align: middle; height: 100%;"></div></div>
         <div class="wrapper">
-            <div class="sidebar-right">
-                <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 100%;"><div class="sidebar-inner scrollable-sidebar" style="overflow: hidden; width: auto; height: 100%;">
+<!--            <div class="sidebar-right">-->
+<!--                <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 100%;"><div class="sidebar-inner scrollable-sidebar" style="overflow: hidden; width: auto; height: 100%;">
                         <div class="sidebar-header clearfix">
                             <input class="form-control dark-input" placeholder="Search" type="text">
                             <div class="btn-group pull-right">
@@ -263,8 +263,8 @@ and open the template in the editor.
                                 </li>
                             </ul>
                         </div>
-                    </div><div class="slimScrollBar" style="width: 0px; position: absolute; top: 0px; opacity: 0.4; display: none; border-radius: 7px; z-index: 99; right: 1px; height: 501.694px; background: rgb(0, 0, 0);"></div><div class="slimScrollRail" style="width: 0px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; opacity: 0.2; z-index: 90; right: 1px; background: rgb(51, 51, 51);"></div></div><!-- sidebar-inner -->
-            </div><!-- sidebar-right -->
+                    </div><div class="slimScrollBar" style="width: 0px; position: absolute; top: 0px; opacity: 0.4; display: none; border-radius: 7px; z-index: 99; right: 1px; height: 501.694px; background: rgb(0, 0, 0);"></div><div class="slimScrollRail" style="width: 0px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; opacity: 0.2; z-index: 90; right: 1px; background: rgb(51, 51, 51);"></div></div> sidebar-inner 
+            </div> sidebar-right -->
             <header class="top-nav">
                 <div class="top-nav-inner">
                     <div class="nav-header">
@@ -316,7 +316,7 @@ and open the template in the editor.
                         </ul>
 
                         <a href="index.html" class="brand">
-                            <i class="fa fa-database"></i><span class="brand-name">SIMPLIFY ADMIN</span>
+                            <i class="fa fa-database"></i><span class="brand-name">FLEXI MALL MERCHANT</span>
                         </a>
                     </div>
                     <div class="nav-container">
@@ -424,7 +424,7 @@ and open the template in the editor.
                                         <li><a href="#">View all messages</a></li>					  
                                     </ul>
                                 </li>
-                                <li>
+<!--                                <li>
                                     <a href="#" data-toggle="dropdown"><i class="fa fa-bell fa-lg"></i></a>
                                     <span class="badge badge-info bounceIn animation-delay6 active">4</span>
                                     <ul class="dropdown-menu notification dropdown-3 pull-right">
@@ -476,15 +476,15 @@ and open the template in the editor.
                                         </li>
                                         <li><a href="#">View all notifications</a></li>					  
                                     </ul>
-                                </li>
-                                <li class="chat-notification">
+                                </li>-->
+<!--                                <li class="chat-notification">
                                     <a href="#" class="sidebarRight-toggle"><i class="fa fa-comments fa-lg"></i></a>
                                     <span class="badge badge-danger bounceIn active">1</span>
 
                                     <div class="chat-alert">
                                         Hello, Are you there?
                                     </div>
-                                </li>
+                                </li>-->
                             </ul>
                         </div>
                     </div>
@@ -498,7 +498,7 @@ and open the template in the editor.
                                     Main Menu
                                 </li>
                                 <li class="bg-palette1 active">
-                                    <a href="index.html">
+                                    <a href="{!! url('merchant/dash') !!}">
                                         <span class="menu-content block">
                                             <span class="menu-icon"><i class="block fa fa-home fa-lg"></i></span>
                                             <span class="text m-left-sm">Dashboard</span>
@@ -508,40 +508,28 @@ and open the template in the editor.
                                         </span>
                                     </a>
                                 </li>
-                                <li class="bg-palette2">
-                                    <a href="landing/landing.html">
-                                        <span class="menu-content block">
-                                            <span class="menu-icon"><i class="block fa fa-desktop fa-lg"></i></span>
-                                            <span class="text m-left-sm">Landing</span>
-                                        </span>
-                                        <span class="menu-content-hover block">
-                                            Landing
-                                        </span>
-                                    </a>
-                                </li>
+                               
                                 <li class="openable bg-palette3">
                                     <a href="#">
                                         <span class="menu-content block">
                                             <span class="menu-icon"><i class="block fa fa-list fa-lg"></i></span>
-                                            <span class="text m-left-sm">Form Elements</span>
+                                            <span class="text m-left-sm">PRODUCTS</span>
                                             <span class="submenu-icon"></span>
                                         </span>
                                         <span class="menu-content-hover block">
                                             Form
                                         </span>
                                     </a>
-                                    <ul class="submenu bg-palette4">
-                                        <li><a href="form_element.html"><span class="submenu-label">Form Element</span></a></li>
-                                        <li><a href="form_validation.html"><span class="submenu-label">Form Validation</span></a></li>
-                                        <li><a href="form_wizard.html"><span class="submenu-label">Form Wizard</span></a></li>
-                                        <li><a href="dropzone.html"><span class="submenu-label">Dropzone</span></a></li>
+                                    <ul class="submenu bg-palette4">  
+                                    <li><a href="{!! url('item/create') !!}"><span class="submenu-label">Add Product</span></a></li>
+                                     <li><a href="{!! url('item/view') !!}"><span class="submenu-label">View Products</span></a></li>
                                     </ul>
                                 </li>
                                 <li class="openable bg-palette4">
                                     <a href="#">
                                         <span class="menu-content block">
                                             <span class="menu-icon"><i class="block fa fa-tags fa-lg"></i></span>
-                                            <span class="text m-left-sm">UI Elements</span>
+                                            <span class="text m-left-sm">L & R</span>
                                             <span class="submenu-icon"></span>
                                         </span>
                                         <span class="menu-content-hover block">
@@ -549,26 +537,12 @@ and open the template in the editor.
                                         </span>
                                     </a>
                                     <ul class="submenu">
-                                        <li><a href="ui_element.html"><span class="submenu-label">Basic Elements</span></a></li>
-                                        <li><a href="button.html"><span class="submenu-label">Button &amp; Icons</span></a></li>
-                                        <li class="openable">
-                                            <a href="#">
-                                                <small class="badge badge-success badge-square bounceIn animation-delay2 m-left-xs pull-right">2</small>
-                                                <span class="submenu-label">Tables</span>
-                                            </a>
-                                            <ul class="submenu third-level">
-                                                <li><a href="static_table.html"><span class="submenu-label">Static Table</span></a></li>
-                                                <li><a href="datatable.html"><span class="submenu-label">DataTables</span></a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="widget.html"><span class="submenu-label">Widget</span></a></li>
-                                        <li><a href="tab.html"><span class="submenu-label">Tab</span></a></li>
-                                        <li><a href="calendar.html"><span class="submenu-label">Calendar</span></a></li>
-                                        <li><a href="treeview.html"><span class="submenu-label">Treeview</span></a></li>
-                                        <li><a href="nestable_list.html"><span class="submenu-label">Nestable Lists</span></a></li>
+                                        <li><a href="#"><span class="submenu-label">Rewards</span></a></li>
+                                        <li><a href="#"><span class="submenu-label">Discounts</span></a></li>
+
                                     </ul>
                                 </li>
-                                <li class="bg-palette1">
+<!--                                <li class="bg-palette1">
                                     <a href="inbox.html">
                                         <span class="menu-content block">
                                             <span class="menu-icon"><i class="block fa fa-envelope fa-lg"></i></span>
@@ -579,8 +553,8 @@ and open the template in the editor.
                                             Inboxs
                                         </span>
                                     </a>
-                                </li>
-                                <li class="bg-palette2">
+                                </li>-->
+<!--                                <li class="bg-palette2">
                                     <a href="timeline.html">
                                         <span class="menu-content block">
                                             <span class="menu-icon"><i class="block fa fa-clock-o fa-lg"></i></span>
@@ -591,7 +565,7 @@ and open the template in the editor.
                                             Timeline
                                         </span>
                                     </a>
-                                </li>
+                                </li>-->
                                 <li class="menu-header">
                                     Others
                                 </li>
@@ -599,7 +573,7 @@ and open the template in the editor.
                                     <a href="#">
                                         <span class="menu-content block">
                                             <span class="menu-icon"><i class="block fa fa-gift fa-lg"></i></span>
-                                            <span class="text m-left-sm">Extra Pages</span>
+                                            <span class="text m-left-sm">Reports</span>
                                             <span class="submenu-icon"></span>
                                         </span>
                                         <span class="menu-content-hover block">
@@ -607,20 +581,11 @@ and open the template in the editor.
                                         </span>
                                     </a>
                                     <ul class="submenu">
-                                        <li><a href="signin.html"><span class="submenu-label">Sign in</span></a></li>
-                                        <li><a href="signup.html"><span class="submenu-label">Sign Up</span></a></li>
-                                        <li><a href="lockscreen.html"><span class="submenu-label">Lock Screen</span></a></li>
-                                        <li><a href="profile.html"><span class="submenu-label">Profile</span></a></li>
-                                        <li><a href="gallery.html"><span class="submenu-label">Gallery</span></a></li>
-                                        <li><a href="blog.html"><span class="submenu-label">Blog</span></a></li>
-                                        <li><a href="single_post.html"><span class="submenu-label">Single Post</span></a></li>
-                                        <li><a href="pricing.html"><span class="submenu-label">Pricing</span></a></li>
-                                        <li><a href="invoice.html"><span class="submenu-label">Invoice</span></a></li>
-                                        <li><a href="error404.html"><span class="submenu-label">Error404</span></a></li>
-                                        <li><a href="blank.html"><span class="submenu-label">Blank</span></a></li>
+                                        <li><a href="#"><span class="submenu-label">Sales</span></a></li>
+                                        <li><a href="#"><span class="submenu-label">Orders</span></a></li>
                                     </ul>
                                 </li>
-                                <li class="openable bg-palette4">
+<!--                                <li class="openable bg-palette4">
                                     <a href="#">
                                         <span class="menu-content block">
                                             <span class="menu-icon"><i class="block fa fa-list fa-lg"></i></span>
@@ -654,6 +619,28 @@ and open the template in the editor.
                                         </li>
                                         <li><a href="#"><span class="submenu-label">menu 2.2</span></a></li>
                                     </ul>
+                                </li>-->
+                                 <li class="bg-palette2">
+                                    <a href="#">
+                                        <span class="menu-content block">
+                                            <span class="menu-icon"><i class="block fa fa-desktop fa-lg"></i></span>
+                                            <span class="text m-left-sm">Product Survey</span>
+                                        </span>
+                                        <span class="menu-content-hover block">
+                                            Landing
+                                        </span>
+                                    </a>
+                                </li>
+                                 <li class="bg-palette2">
+                                    <a href="#">
+                                        <span class="menu-content block">
+                                            <span class="menu-icon"><i class="block fa fa-desktop fa-lg"></i></span>
+                                            <span class="text m-left-sm">Settings</span>
+                                        </span>
+                                        <span class="menu-content-hover block">
+                                            Landing
+                                        </span>
+                                    </a>
                                 </li>
                             </ul>
                         </div>	
