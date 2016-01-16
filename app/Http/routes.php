@@ -42,4 +42,4 @@ Route::get('item/view','ItemController@index');
 
 //User
 Route::get('user/create','UserController@create');
-Route::post('item/store','UserController@store');
+Route::post('user/store','UserController@store');

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use App\User;
 use App\Http\Controllers\Controller;
 
 class UserController extends Controller
@@ -38,7 +39,22 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
+        $this->validate($request,['name'=>'required','email'=>'required','phonenumber'=>'required',
+            'password'=>'required']);
+        
         //
+        $user = new User;
+        
+        $user->name = $request->input('name');
+        $user->email = $request->input('email');
+        $user->phone_number =$request->input('phonenumber');
+        $user->password = $request->input('password');
+        
+        $user->save();
+        
+       
+       return redirect('/'); 
+        
     }
 
     /**
