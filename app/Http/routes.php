@@ -43,3 +43,6 @@ Route::get('item/view','ItemController@index');
 //User
 Route::get('user/create','UserController@create');
 Route::post('user/store','UserController@store');
+
+//Mall
+Route::get('mall/create','MallController@create');
