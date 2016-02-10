@@ -46,3 +46,4 @@ Route::post('user/store','UserController@store');
 
 //Mall
 Route::get('mall/create','MallController@create');
+Route::post('mall/store','MallController@store');

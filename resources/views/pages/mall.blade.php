@@ -11,9 +11,9 @@
       <ul class="breadcrumb">
         <li><a href="#">Home</a> <span class="divider">/</span></li>
         <li><a href="#">Pages</a> <span class="divider">/</span></li>
-        <li class="active">Merchant</li>
+        <li class="active">Mall</li>
       </ul>
-      <h1 class="margin-bottom">Register <span>Company</span></h1>
+      <h1 class="margin-bottom">Add <span>Mall</span></h1>
     </div>
 
   </div>
@@ -22,7 +22,7 @@
       <div class="span3">
 <!--      <h4 class="margin-bottom"></h4>-->
      
-      {!!Form::open (array('url'=>'merchant/store','method'=>'post','files'=>'true') ) !!}
+      {!!Form::open (array('url'=>'mall/store','method'=>'post','files'=>'true') ) !!}
         <div class="control-group">
           <label class="control-label">Details</label>
           <div class="controls">
@@ -46,7 +46,7 @@
         <div class="control-group">
             <label class="control-label">Banner Image</label>
             <div class="controls">
-                {!! Form::file('image',null,array('class'=>'form-control','required')) !!}
+             {!! Form::file('image',null,array('class'=>'form-control','required')) !!}
 
             </div>
         </div>

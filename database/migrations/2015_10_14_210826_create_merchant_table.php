@@ -24,6 +24,7 @@ class CreateMerchantTable extends Migration
                  $table->string('bannermessage');
                  $table->string('email');
                  $table->string('registrationstatus');
+                 $table->int('mall');
                  $table->timestamps();
                  
                 });

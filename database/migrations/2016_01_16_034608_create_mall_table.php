@@ -32,5 +32,6 @@ class CreateMallTable extends Migration
     public function down()
     {
         //
+        Schema::drop('mall');
     }
 }

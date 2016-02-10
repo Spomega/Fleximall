@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Mall;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -27,6 +27,11 @@ class MallController extends Controller
     public function create()
     {
         //
+        
+          
+          return view('pages.mall');
+        
+        
     }
 
     /**
@@ -38,6 +43,32 @@ class MallController extends Controller
     public function store(Request $request)
     {
         //
+        
+//          $this->validate($request,['image'=>'required|mimes:jpeg,png','mallname'=>'required','location'=>'required',
+//            'status'=>'required']);
+          
+          $mall = new Mall;
+          
+          $mall->mallname = $request->input('mallname');
+          $mall->location = $request->input('location');
+          $mall->status = $request->input('category');
+          
+                 // upload the image //
+      $file = $request->file('image');
+      $destination_path =  'localhost:8000'.'/public/images/malls/';
+      $filename = str_random(6).'_'.$file->getClientOriginalName();
+      $file->move($destination_path, $filename);
+       
+      // save image data into database //
+      $mall->mallimage  = $destination_path . $filename;
+          
+      $mall->save();
+          
+          
+      return redirect('mall/create')->with('message','Mall Created Successfully');
+          
+          
+          
     }
 
     /**

@@ -22,8 +22,8 @@ and open the template in the editor.
 <link rel="shortcut icon" href="img/favicon.ico" />
 <!-- Scripts -->
 <!--<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>-->
-<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
-
+<!--<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>-->
+ {!! HTML::script('js/jquery-1.11.1.min.js') !!}
  {!! HTML::script('js/bootstrap.min.js') !!}
  {!! HTML::script('js/jquery.nicescroll.min.js') !!}
  {!! HTML::script('js/jquery.nicescroll.min.js') !!}

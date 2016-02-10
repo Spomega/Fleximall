@@ -86,49 +86,15 @@
         <ul class="thumbnails">
           
           <!-- Products Single Box -->
+           @foreach ($malls as $mall)
           <li class="span3" style="opacity: 1;">
-            <div class="thumbnail"><img src="images/malls/accramall.jpg" alt="Accra Mall" class="folio">
-<!--              <div class="folio-detail"><a href="products/accramall.jpg" class="view-fancybox" rel="tag"><i class="icon-camera"></i></a></div>-->
-                <span class="new">Accra Mall</span>
+            <div class="thumbnail">{!! HTML::image($mall->mallimage,"Mall Image",array('class'=>'folio')) !!}
+                <span class="new">{{$mall->mallname}}</span>
             </div>
           </li>
+           @endforeach
+     
           
-          <!-- Products Single Box -->
-          <li class="span3" style="opacity: 1;">
-            <div class="thumbnail"><img src="images/malls/westhillsmall.jpg" alt="West Hills Mall" class="folio">
-<!--              <div class="folio-detail"><a href="products/folio-2.jpg" class="view-fancybox" rel="tag"><i class="icon-camera"></i></a></div>-->
-                 <span class="new">West Hills Mall</span>
-            </div>
-          </li>
-          
-          <!-- Products Single Box -->
-          <li class="span3" style="opacity: 1;">
-            <div class="thumbnail"><img src="images/malls/marinamall.jpg" alt="Marina Mall" class="folio">
-<!--              <div class="folio-detail"><a href="products/folio-3.jpg" class="view-fancybox" rel="tag"><i class="icon-camera"></i></a></div>-->
-              <span class="new">Marina Mall</span>
-            </div>
-          </li>
-          
-          <!-- Products Single Box -->
-          <li class="span3" style="opacity: 1;">
-            <div class="thumbnail"><img src="images/malls/oxfordstreet.jpg" alt="Oxford Street Mall" class="folio">
-<!--              <div class="folio-detail"><a href="products/folio-4.jpg" class="view-fancybox" rel="tag"><i class="icon-camera"></i></a></div>-->
-              <span class="new">Oxford Street Mall</span>
-            </div>
-          </li>
-          <li class="span3" style="opacity: 1;">
-            <div class="thumbnail"><img src="images/malls/palacemall.jpg" alt="Palace Mall" class="folio">
-<!--              <div class="folio-detail"><a href="products/folio-4.jpg" class="view-fancybox" rel="tag"><i class="icon-camera"></i></a></div>-->
-              <span class="new">Palace Mall</span>
-            </div>
-          </li>
-          <!-- Products Single Box -->
-          <li class="span3" style="opacity: 1;">
-            <div class="thumbnail"><img src="images/malls/localmarkets.jpg" alt="Local Markets" class="folio">
-<!--              <div class="folio-detail"><a href="products/folio-4.jpg" class="view-fancybox" rel="tag"><i class="icon-camera"></i></a></div>-->
-              <span class="new">Local Markets</span>
-            </div>
-          </li>
         </ul>
       </div>
     </div>

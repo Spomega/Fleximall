@@ -8,6 +8,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use App\Repositories\ItemRepository as Item;
+use App\Repositories\MallRepository as Mall;
 
 class HomeController extends Controller
 {
@@ -15,10 +16,13 @@ class HomeController extends Controller
     
       
      protected $item;
-    
-     public function __construct(Item $item) {
+     protected $mall;
+
+
+     public function __construct(Item $item,Mall $mall) {
        
         $this->item = $item;
+        $this->mall = $mall;
     }
     
     /**
@@ -29,7 +33,9 @@ class HomeController extends Controller
     public function index()
     {
          $items = $this->item->all();
-	  return view('pages.index',  compact('items'));
+         $malls = $this->mall->all();
+         
+	  return view('pages.index',  compact('items','malls'));
     }
 
     /**
