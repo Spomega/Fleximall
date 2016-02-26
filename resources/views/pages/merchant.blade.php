@@ -48,6 +48,21 @@
                 </div>
             </div>
         </div>
+     
+       <div class="control-group">
+            <label class="control-label">Category</label>
+            <div class="controls">
+                <div class="col-xs-8">
+                    <select class="form-control" name="category">
+                        
+                        <option value="1">Department Store</option>
+                      
+                    </select>
+                    <label></label>
+
+                </div>
+            </div>
+        </div>      
         <div class="control-group">
             <label class="control-label">Banner Image</label>
             <div class="controls">
