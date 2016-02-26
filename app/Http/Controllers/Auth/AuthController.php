@@ -62,4 +62,10 @@ class AuthController extends Controller
             'password' => bcrypt($data['password']),
         ]);
     }
+    
+    
+    public function loginview()
+    {
+        return view('pages.auth.login');
+    }
 }
