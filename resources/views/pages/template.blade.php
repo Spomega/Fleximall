@@ -72,11 +72,12 @@ and open the template in the editor.
                     </ul>-->
 
                     <!-- Header Login -->
-                    <p class="log-reg"><a href="#">Sign In</a> <a href="#">Register</a></p>
+                    <p class="log-reg"><a href="login/index">Sign In</a> <a href="#">Register</a></p>
                     <div class="clearfix"></div>
                 </div>
             </div>
         </div>
+        
 
         @if(Session::has('message'))
 <!--                    <div class="alert alert-success alert-dismissible">

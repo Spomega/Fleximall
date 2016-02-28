@@ -64,6 +64,24 @@ class AuthController extends Controller
     }
     
     
+   
+    /**
+     * Create a new user instance after a valid registration.
+     *
+     * @param  
+     * @return User
+     */
+  protected function postRegister(RegisterRequest $request) {
+        $this->user->name = $request->name;
+        $this->user->email = $request->email;
+        $this->user->password = bcrypt($request->password);
+        $this->user->phone_number = $request->phonenumber;
+        $this->user->save();
+        return redirect('users/login');
+    }
+
+    
+    
     public function loginview()
     {
         return view('pages.auth.login');

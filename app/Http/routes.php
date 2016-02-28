@@ -51,3 +51,10 @@ Route::post('mall/store','MallController@store');
 //Login
 
 Route::get('login/index','Auth\AuthController@loginview');
+Route::get('users/login', 'Auth\AuthController@getLogin');
+Route::post('users/login', 'Auth\AuthController@postLogin');
+Route::get('users/logout', 'Auth\AuthController@getLogout');
+
+Route::get('users/register', 'Auth\AuthController@getRegister');
+Route::post('users/register', 'Auth\AuthController@postRegister');
+
