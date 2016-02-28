@@ -24,7 +24,7 @@
       <div class="span3">
 <!--      <h4 class="margin-bottom"></h4>-->
      
-      {!!Form::open (array('url'=>'user/store','method'=>'post') ) !!}
+      {!!Form::open (array('url'=>'users/register','method'=>'post') ) !!}
         <div class="control-group">
           <label class="control-label">Details</label>
           <div class="controls">
@@ -32,7 +32,9 @@
       {!! Form::text('email',null,array('class'=>'form-control','required'=>'true','placeholder'=>'email')) !!}
       {!! Form::text('phonenumber',null,array('class'=>'form-control','required'=>'true','placeholder'=>'phone number')) !!}
       
+        <label class="control-label">Password</label>
       {!! Form::password('password',null,array('class'=>'form-control','required'=>'true','placeholder'=>'password')) !!}
+      <label class="control-label">Confirm Password</label>
       {!! Form::password('confirmpassword',null,array('class'=>'form-control','required'=>'true','placeholder'=>'confirm password')) !!}
           </div>
         </div>

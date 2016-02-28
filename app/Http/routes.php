@@ -51,10 +51,18 @@ Route::post('mall/store','MallController@store');
 //Login
 
 Route::get('login/index','Auth\AuthController@loginview');
-Route::get('users/login', 'Auth\AuthController@getLogin');
+Route::get('users/login','Auth\AuthController@loginview');
 Route::post('users/login', 'Auth\AuthController@postLogin');
 Route::get('users/logout', 'Auth\AuthController@getLogout');
 
 Route::get('users/register', 'Auth\AuthController@getRegister');
 Route::post('users/register', 'Auth\AuthController@postRegister');
 
+/* Authenticated users */
+Route::group(['middleware' => 'auth'], function()
+{
+    Route::get('/', array('as'=>'dashboard', function()
+	{
+	return View('/');
+	}));
+});
