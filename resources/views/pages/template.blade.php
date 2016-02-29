@@ -44,14 +44,15 @@ and open the template in the editor.
 
                     <!-- Secondary Menu -->
                     <ul class="nav nav-pills span6">
-                        <li class="active"><a href="#">Home</a></li>
-                        <li><a href="#">Wish List</a></li>
-                        <li><a href="#">My Account</a></li>
-                        <li><a href="#">Shopping Cart</a></li>
-                        <li><a href="#">Checkout</a></li>
+                        <li class="active"><a href="/">Home</a></li>
+                        <li><a href="#">{{Auth::check() ? 'Wish List' : ''}}</a></li>
+                        <li><a href="#">{{Auth::check() ? 'My Account' : ''}}</a></li>
+                        <li><a href="#">{{Auth::check() ? 'Shopping Cart' : ''}}</a></li>
+                        <li><a href="#">{{Auth::check() ? 'Checkout' : ''}}</a></li>
                     </ul>
 
                     <!-- Header Cart -->
+                    @if(Auth::check())
                     <div class="cart"><i class="icon-shopping-cart"></i>
                         <p>GHC 0.00 <span>( 0 )</span></p>
 
@@ -63,7 +64,7 @@ and open the template in the editor.
                             </div>
                         </div>
                     </div>
-
+                    @endif
                     <!-- Currency -->
 <!--                    <ul class="nav nav-pills currency">
                         <li class="active"><a href="#">&euro;</a></li>
@@ -72,7 +73,8 @@ and open the template in the editor.
                     </ul>-->
 
                     <!-- Header Login -->
-                    <p class="log-reg"><a href="login/index">Sign In</a> <a href="#">Register</a></p>
+                    <p class="log-reg"><a href="{{Auth::check() ? url('users/logout') : url('users/login')}}">{{Auth::check() ? 'Logout' : 'Sign In'}}</a> 
+                        <a href="users/register">{{Auth::check() ? '' : 'Register'}}</a> <a href="merchant/create">{{Auth::check() ? '' : 'Merchant'}}</a></p>
                     <div class="clearfix"></div>
                 </div>
             </div>

@@ -8,6 +8,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use App\Http\Requests\Auth\RegisterRequest;
 use App\Http\Requests\Auth\LoginRequest;
+use App\Merchant;
+use Auth;
 
 use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
@@ -112,8 +114,17 @@ class AuthController extends Controller
 
     
      protected function postLogin(LoginRequest $request) {
-         echo 'i am in login request';
-        if ($this->auth->attempt($request->only('email', 'password'))) {
+         
+         
+        if (Auth::attempt(['email' => $request->email, 'password' => $request->password, 'type' => 'merchant']))
+        {
+             return redirect('merchant/dash');
+        } 
+         elseif (Auth::attempt(['email' => $request->email, 'password' => $request->password, 'type' => 'customer']))
+        {
+             return redirect('/');
+        }   
+        elseif($this->auth->attempt($request->only('email', 'password'))) {
             return redirect('/');
         }
  
@@ -136,7 +147,47 @@ class AuthController extends Controller
     
     
     
-     /**
+    protected function merchantRegister(Request $request)
+    {
+        $this->user->name =$request->merchantname;
+        $this->user->email = $request->email; 
+        $this->user->password = bcrypt($request->password);
+        $this->user->phone_number = $request->contactnumber;
+        $this->user->type = 'merchant';
+        $this->user->save();
+        
+        $user_id =  $this->user->id;
+        
+        
+        $merchant = new Merchant;
+           
+        $merchant->shopname  = $request->input('merchantname');
+        $merchant->contactnumber = $request->input('contactnumber');
+        $merchant->bannerimage = $request->input('bannerimage');
+        $merchant->address = $request->input('address');
+        $merchant->category = $request->input('category');
+        $merchant->email = $request->input('email');
+        $merchant->registrationstatus = '0';
+        $merchant->user_id = $user_id;
+        $merchant->mall_id = 2;
+        
+            // upload the image //
+      $file = $request->file('image');
+      $destination_path =  'localhost:8000'.'/public/images/';
+      $filename = str_random(6).'_'.$file->getClientOriginalName();
+      $file->move($destination_path, $filename);
+       
+      // save image data into database //
+      $merchant->bannerimage = $destination_path . $filename;
+      
+      $merchant->save();
+        
+       
+      return redirect('users/login')->with('message','Merchant Created'); 
+    }
+
+
+    /**
      * Log the user out of the application.
      *
      * @return Response

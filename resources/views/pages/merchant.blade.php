@@ -22,7 +22,7 @@
       <div class="span3">
 <!--      <h4 class="margin-bottom"></h4>-->
      
-      {!!Form::open (array('url'=>'merchant/store','method'=>'post','files'=>'true') ) !!}
+      {!!Form::open (array('url'=>'users/merchantregister','method'=>'post','files'=>'true') ) !!}
         <div class="control-group">
           <label class="control-label">Details</label>
           <div class="controls">
@@ -33,6 +33,10 @@
    
       {!! Form::text('bannermessage',null,array('class'=>'form-control','required'=>'true','placeholder'=>'Banner Message'))!!}
       
+       <label class="control-label">Password</label>
+      {!! Form::password('password',null,array('class'=>'form-control','required'=>'true','placeholder'=>'password')) !!}
+      <label class="control-label">Confirm Password</label>
+      {!! Form::password('confirmpassword',null,array('class'=>'form-control','required'=>'true','placeholder'=>'confirm password')) !!}
           </div>
         </div>
         <div class="control-group">
@@ -50,19 +54,21 @@
         </div>
      
        <div class="control-group">
-            <label class="control-label">Category</label>
+            <label class="control-label">Mall</label>
             <div class="controls">
                 <div class="col-xs-8">
                     <select class="form-control" name="category">
                         
-                        <option value="1">Department Store</option>
+                        <option value="2">Palace Mall</option>
                       
                     </select>
                     <label></label>
 
                 </div>
             </div>
-        </div>      
+        </div>   
+      
+          
         <div class="control-group">
             <label class="control-label">Banner Image</label>
             <div class="controls">

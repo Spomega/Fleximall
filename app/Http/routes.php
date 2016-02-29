@@ -57,12 +57,13 @@ Route::get('users/logout', 'Auth\AuthController@getLogout');
 
 Route::get('users/register', 'Auth\AuthController@getRegister');
 Route::post('users/register', 'Auth\AuthController@postRegister');
-
-/* Authenticated users */
-Route::group(['middleware' => 'auth'], function()
-{
-    Route::get('/', array('as'=>'dashboard', function()
-	{
-	return View('/');
-	}));
-});
+Route::post('users/merchantregister', 'Auth\AuthController@merchantRegister');
+//
+///* Authenticated users */
+//Route::group(['middleware' => 'auth'], function()
+//{
+//    Route::get('/', array('as'=>'dashboard', function()
+//	{
+//	return View('pages.');
+//	}));
+//});
