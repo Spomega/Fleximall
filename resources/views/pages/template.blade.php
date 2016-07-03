@@ -74,7 +74,7 @@ and open the template in the editor.
 
                     <!-- Header Login -->
                     <p class="log-reg"><a href="{{Auth::check() ? url('users/logout') : url('users/login')}}">{{Auth::check() ? 'Logout' : 'Sign In'}}</a> 
-                        <a href="users/register">{{Auth::check() ? '' : 'Register'}}</a> <a href="merchant/create">{{Auth::check() ? '' : 'Merchant'}}</a></p>
+                        <a href="{{url('users/register')}}">{{Auth::check() ? '' : 'Register'}}</a> <a href="{{url('merchant/create')}}">{{Auth::check() ? '' : 'Merchant'}}</a></p>
                     <div class="clearfix"></div>
                 </div>
             </div>

@@ -31,7 +31,10 @@ Route::post('schedule/store','ScheduleController@store');
 Route::get('merchant/create','MerchantController@create');
 Route::get('merchant/dashboard','MerchantController@showdashboard');
 Route::get('merchant/dash','MerchantController@index');
+Route::get('merchant/mallview/{id}','MerchantController@show');
 Route::post('merchant/store','MerchantController@store');
+Route::post('merchant/logout','Auth\AuthController@getLogout');
+
 
 
 
@@ -59,11 +62,17 @@ Route::get('users/register', 'Auth\AuthController@getRegister');
 Route::post('users/register', 'Auth\AuthController@postRegister');
 Route::post('users/merchantregister', 'Auth\AuthController@merchantRegister');
 //
-///* Authenticated users */
+/* Authenticated users */
 //Route::group(['middleware' => 'auth'], function()
 //{
-//    Route::get('/', array('as'=>'dashboard', function()
+//    Route::get('item/create', array('as'=>'additem', function()
 //	{
-//	return View('pages.');
+//	return View('pages.auth.login');
 //	}));
+//        
+//    Route::get('merchant/dash', array('as'=>'dashboard', function()
+//	{
+//	return View('pages.auth.login');
+//	}));       
+//                
 //});

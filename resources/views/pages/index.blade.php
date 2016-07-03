@@ -88,7 +88,7 @@
           <!-- Products Single Box -->
            @foreach ($malls as $mall)
           <li class="span3" style="opacity: 1;">
-            <div class="thumbnail">{!! HTML::image($mall->mallimage,"Mall Image",array('class'=>'folio')) !!}
+              <div class="thumbnail"><a href="{{url('')}}">{!! HTML::image($mall->mallimage,"Mall Image",array('class'=>'folio')) !!}</a>
                 <span class="new">{{$mall->mallname}}</span>
             </div>
           </li>

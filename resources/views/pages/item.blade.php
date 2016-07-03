@@ -55,6 +55,11 @@
         <div class="control-group no-margin">
           <div class="controls">
             <button type="submit" class="btn ">Submit</button>
+            @if(Auth::check())
+            <input type="hidden" name="merchant_id" id="merchant_id"  value="{{Auth::user()->id}}"/>
+            @else
+             <input type="hidden" name="merchant_id" id="merchant_id"  value="0"/>
+            @endIf
           </div>
         </div>
       {!!Form::close()!!}

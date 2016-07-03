@@ -1,4 +1,4 @@
-@extends('pages.template')
+@extends('pages.template2')
 
 @section('main')
 

@@ -62,7 +62,7 @@ class ItemController extends Controller
         $item->description = $request->input('description');
         $item->category = $request->input('category');
         $item->quantity = $request->input('quantity');
-        $item->merchant_id = '2';
+        $item->merchant_id = $request->input('merchant_id');
         $item->status = '1';
         
        

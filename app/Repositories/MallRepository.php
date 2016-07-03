@@ -11,7 +11,13 @@ class MallRepository extends Repository {
         return "App\Mall";
     }
     
-    
+    public function getAllSelect()       
+      {
+        
+		$select = $this->all()->lists('mallname', 'id');
+
+		return compact('select');
+	}
 
 
     

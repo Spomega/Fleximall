@@ -6,9 +6,19 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Merchant;
+use App\User;
+use Auth;
+use App\Repositories\MallRepository as ViewMall;
 
-class MerchantController extends Controller
+class MerchantController extends Controller    
 {
+    
+     protected $mall;
+    
+     public function __construct(ViewMall $mall) {
+       
+        $this->mall = $mall;
+    }
     /**
      * Display a listing of the resource.
      *
@@ -16,8 +26,9 @@ class MerchantController extends Controller
      */
     public function index()
     {
-        //
-         return view('pages.mechant_dashboard');
+        $id = Auth::user()->id;
+        $merchant = User::find($id)->merchant;
+        return view('pages.mechant_dashboard', compact('merchant'));
     }
 
     /**
@@ -28,7 +39,7 @@ class MerchantController extends Controller
     public function create()
     {
         //
-        return view('pages.merchant');
+        return view('pages.merchant',$this->mall->getAllSelect());
     }
     
     

@@ -43,10 +43,11 @@
             <label class="control-label">Category</label>
             <div class="controls">
                 <div class="col-xs-8">
-                    <select class="form-control" name="category">
+<!--                    <select class="form-control" name="category">
                         <option value="1">Department Store</option>
                         <option value="2">General Store</option>
-                    </select>
+                    </select>-->
+                     {!! Form::select('category', [ '1' => 'General Store','2' => 'Department Store']) !!}
                     <label></label>
 
                 </div>
@@ -57,13 +58,14 @@
             <label class="control-label">Mall</label>
             <div class="controls">
                 <div class="col-xs-8">
-                    <select class="form-control" name="category">
-                        
+<!--                    <select class="form-control" name="category">
+                        <option value="1">Accra Mall</option>
                         <option value="2">Palace Mall</option>
-                      
-                    </select>
+                       
+                    </select>-->
+                    {!! Form::select('mall', $select) !!}
                     <label></label>
-
+                    
                 </div>
             </div>
         </div>   

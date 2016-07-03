@@ -1,9 +1,4 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+
 <html>
     <head>
         <meta charset="utf-8">
@@ -280,16 +275,17 @@ and open the template in the editor.
                                 <span class="badge badge-danger bounceIn">1</span>
                                 <ul class="dropdown-menu dropdown-sm pull-right user-dropdown">
                                     <li class="user-avatar">
-                                        <img src="images/profile/profile1.jpg" alt="" class="img-circle">
+                                      <img src="images/profile/profile1.jpg" alt="" class="img-circle">
+                                      
                                         <div class="user-content">
-                                            <h5 class="no-m-bottom">Jane Doe</h5>
+                                            <h5 class="no-m-bottom">{{Auth::user()->name}}</h5>
                                             <div class="m-top-xs">
-                                                <a href="profile.html" class="m-right-sm">Profile</a>
-                                                <a href="signin.html">Log out</a>
+<!--                                                <a href="profile.html" class="m-right-sm">Profile</a>-->
+                                                <a href="users/logout" >Log out</a>
                                             </div>
                                         </div>
                                     </li>	  
-                                    <li>
+<!--                                    <li>
                                         <a href="inbox.html">
                                             Inbox
                                             <span class="badge badge-danger bounceIn animation-delay2 pull-right">1</span>
@@ -310,7 +306,7 @@ and open the template in the editor.
                                     <li class="divider"></li>
                                     <li>
                                         <a href="#">Setting</a>
-                                    </li>			  	  
+                                    </li>			  	  -->
                                 </ul>
                             </li>
                         </ul>
@@ -338,16 +334,17 @@ and open the template in the editor.
                         <div class="pull-right m-right-sm">
                             <div class="user-block hidden-xs">
                                 <a href="#" id="userToggle" data-toggle="dropdown">
-                                    <img src="images/profile/profile1.jpg" alt="" class="img-circle inline-block user-profile-pic">
+<!--                                    <img src="images/profile/profile1.jpg" alt="" class="img-circle inline-block user-profile-pic">-->
+                                      {!! HTML::image($merchant->bannerimage,"Thumbnail Image",array('class' => 'img-circle inline-block user-profile-pic')) !!}
                                     <div class="user-detail inline-block">
-                                        Jane Doe
+                                        {{Auth::user()->name}}
                                         <i class="fa fa-angle-down"></i>
                                     </div>
                                 </a>
                                 <div class="panel border dropdown-menu user-panel">
                                     <div class="panel-body paddingTB-sm">
                                         <ul>
-                                            <li>
+<!--                                            <li>
                                                 <a href="profile.html">
                                                     <i class="fa fa-edit fa-lg"></i><span class="m-left-xs">My Profile</span>
                                                 </a>
@@ -357,9 +354,9 @@ and open the template in the editor.
                                                     <i class="fa fa-inbox fa-lg"></i><span class="m-left-xs">Inboxes</span>
                                                     <span class="badge badge-danger bounceIn animation-delay3">2</span>
                                                 </a>
-                                            </li>
+                                            </li>-->
                                             <li>
-                                                <a href="signin.html">
+                                                <a href="merchant/logout">
                                                     <i class="fa fa-power-off fa-lg"></i><span class="m-left-xs">Sign out</span>
                                                 </a>
                                             </li>
@@ -686,7 +683,7 @@ and open the template in the editor.
                                 Dashboard
                             </div>
                             <div class="page-sub-header">
-                                Welcome Back, John Doe , <i class="fa fa-map-marker text-danger"></i> London
+                                Welcome {{Auth::user()->name}}, <i class="fa fa-map-marker text-danger"></i> 
                             </div>
                         </div>
 <!--                        <div class="col-sm-6 text-right text-left-sm p-top-sm">
