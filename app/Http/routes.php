@@ -42,6 +42,7 @@ Route::post('merchant/logout','Auth\AuthController@getLogout');
 Route::get('item/create','ItemController@create');
 Route::post('item/store','ItemController@store');
 Route::get('item/view','ItemController@index');
+Route::get('item/viewitem/{id}','ItemController@show');
 
 //User
 Route::get('user/create','UserController@create');

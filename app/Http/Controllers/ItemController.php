@@ -91,6 +91,9 @@ class ItemController extends Controller
     public function show($id)
     {
         //
+        
+        $items = $this->item->findAllBy('merchant_id',$id);
+         return view('pages.shopitem',compact('items'));
     }
 
     /**

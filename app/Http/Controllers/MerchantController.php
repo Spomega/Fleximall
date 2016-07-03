@@ -8,16 +8,16 @@ use App\Http\Controllers\Controller;
 use App\Merchant;
 use App\User;
 use Auth;
-use App\Repositories\MallRepository as ViewMall;
+use App\Repositories\MerchantRepository as ViewMerchant;
 
 class MerchantController extends Controller    
 {
     
-     protected $mall;
+     protected $merchant;
     
-     public function __construct(ViewMall $mall) {
+     public function __construct(ViewMerchant $merchant) {
        
-        $this->mall = $mall;
+        $this->merchant = $merchant;
     }
     /**
      * Display a listing of the resource.
@@ -94,7 +94,9 @@ class MerchantController extends Controller
      */
     public function show($id)
     {
-        //
+        // 
+        $shops = $this->merchant->findAllBy('mall_id', $id);
+        return view('pages.shop', compact('shops'));
     }
 
     /**
